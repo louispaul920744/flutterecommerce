@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:provider/provider.dart';
 import 'package:shopapp/models/product.dart';
-import 'package:shopapp/providers/products_provider.dart';
+import 'package:shopapp/providers/products.dart';
 import 'package:multi_select_flutter/multi_select_flutter.dart';
 import 'package:chips_choice/chips_choice.dart';
 

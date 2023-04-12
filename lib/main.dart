@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:shopapp/providers/cart.dart';
 import 'package:shopapp/providers/orders.dart';
-import 'package:shopapp/providers/products_provider.dart';
+import 'package:shopapp/providers/products.dart';
 import 'package:shopapp/screens/CartScreen.dart';
 import 'package:shopapp/screens/ProductDetailPage.dart';
+import 'package:shopapp/screens/addproduct.dart';
+import 'package:shopapp/screens/editproduct.dart';
 import 'package:shopapp/screens/ordersScreen.dart';
 import 'package:shopapp/screens/productoverview.dart';
 import 'package:provider/provider.dart';
+import 'package:shopapp/screens/user_product.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,7 +46,10 @@ class MyApp extends StatelessWidget {
           // When navigating to the "/second" route, build the SecondScreen widget.
           '/second': (context) => ProductDetailPage(),
           '/cart':(context)=> CartScreen(),
-          '/shop':(context)=>OrderScreen()
+          '/shop':(context)=>OrderScreen(),
+          '/orders':(context)=>UserProductsScreen(),
+          '/editproducts':(context)=>EditProductScreen(),
+          '/addproducts':(context)=>Addproduct()
 
         },
       ),

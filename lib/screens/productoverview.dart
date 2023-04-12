@@ -3,10 +3,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:provider/provider.dart';
 import 'package:shopapp/providers/cart.dart';
-import 'package:shopapp/providers/products_provider.dart';
+import 'package:shopapp/providers/products.dart';
 import 'package:shopapp/screens/ProductGrid.dart';
 import 'package:shopapp/screens/appdrawer.dart';
 import '../models/product.dart';
+import '../providers/products.dart';
 import 'ProductDetailPage.dart';
 
 enum filteroptions { favorites, showall }
@@ -24,14 +25,13 @@ class Productoverview extends StatelessWidget {
             "Products List",
             textAlign: TextAlign.center,
           ),
-          
           actions: [
             PopupMenuButton(
               onSelected: (filteroptions selectedValue) {
                 if (selectedValue == filteroptions.favorites) {
-                  productconatiner.showfavouritesonly();
+                  productconatiner.showFavoritesOnly();
                 } else {
-                  productconatiner.showall();
+                  productconatiner.showAll();
                 }
               },
               icon: Icon(Icons.more_vert),
@@ -62,7 +62,7 @@ class Productoverview extends StatelessWidget {
             ),
           ],
         ),
-         drawer: ApppDrawer(),
+        drawer: ApppDrawer(),
         body: ProductsGrid());
   }
 }
